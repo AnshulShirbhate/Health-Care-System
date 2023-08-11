@@ -1,0 +1,66 @@
+<html>
+    <head>
+    <title>Disease Master</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/diseasemaster.css')}}">
+    <link rel="icon" href="{{url_for('static', filename='assets/favicon.png')}}">
+    </head>
+    <body style="background-image: url('{{url_for('static', filename='img/fit.jpg')}}')">
+        <div class="container register">
+        <div class="row">
+        <div class="col-md-3 register-left">
+        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="">
+        <h3>Fit-Pros</h3>
+        <p>You can register your disease here!</p>
+        <a style="border: none;
+        border-radius: 1.5rem;
+        padding: 4%;
+        width: 60%;
+        background: #f8f9fa;
+        font-weight: bold;
+        color: #383d41;
+        margin-top: 30%;
+        margin-bottom: 3%;
+        cursor: pointer;
+        text-decoration: none;" href="/dashboard">Dashboard</a><br>
+        </div>
+        <div class="col-md-9 register-right">
+        <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <h3 class="register-heading">Disease Registration</h3>
+        <div class="row register-form">
+            
+        <form action="/diseasemaster" method="post">
+
+        <div class="form-group">
+            <input type="text" class="form-control" name="dname" placeholder="Disease Name">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="dimage" placeholder="Disease Image URL">
+        </div>
+        <div class="form-group">
+            <textarea type="text" rows="4" class="form-control" name="description" placeholder="Description"></textarea>
+        </div>
+        <div class="form-group">
+            <textarea cols="100" type="text" class="form-control" name="symptoms" placeholder="Symptoms"></textarea>
+        </div>
+        <div class="form-group">
+            <textarea type="text" class="form-control" name="prevention" placeholder="Prevention"></textarea>
+        </div>
+        <div class="form-group">
+            <textarea type="text" class="form-control" name="exercise" placeholder="Exercises"></textarea>
+        </div>
+        <div class="form-group">
+            <textarea type="text" class="form-control" name="diet" placeholder="Diet"></textarea>
+        </div>
+        <button type="submit" class="btnRegister">Register</button>
+        </form>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div> <script type="text/javascript"></script></body></html>

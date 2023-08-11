@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Dashboard</title>
+	<link rel="icon" href="{{url_for('static', filename='assets/favicon.png')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/dashboard.css')}}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<section>
+	<div class="sidebar">
+		<h1 class="logo">Fit-Pros</h1>
+
+		<ul class="nav">
+			<li class="active"><a href="#"><i class="fa fa-home"></i> Dashboard</a></li>
+			<li class=""><a href="/diseasemaster"><i class="fa fa-windows"></i> Disease Master</a></li>
+			<li class=""><a href="{{url_for('.diseaselist')}}"><i class="fa fa-file-pdf-o"></i> Diseases List</a></li>
+			<li class=""><a href="{{url_for('.usersdatalist')}}"><i class="fa fa-file-pdf-o"></i> User's Data</a></li>
+		</ul>
+
+		<ul class="social" style="margin-left: 50px;">
+			<li><a href="https://github.com" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
+			<li><a href="https://instagram.com" target="_blank"><i class="fa fa-instagram fa-2x"></i></a></li>
+		</ul>
+	</div>
+
+	<div class="main">
+		
+		<div class="head-section">
+			<div class="col-6">
+				<h2>Registered Users</h2>
+				<p>{{users | length}} users are registered</p>
+			</div>
+
+			<div class="col-6" style="text-align: right;">
+				<i class="user fa fa-user fa-lg"></i>
+				
+				<div class="profile-div">
+					<p><i class="fa fa-power-off"></i>   <a href="/logout" style="text-decoration: none;">Log Out</a>
+				</div>
+
+		<div class="notification-div">
+			<p>Success!Your registration is now complete!</p>
+			<p>Here's some information you may find useful!</p>			
+		</div>
+
+			</div>
+
+			<div class="clearfix"></div>
+		</div>
+
+		<br><br>
+		<div class="content">
+			<p>All Users</p><br><br>
+
+
+			<table>
+  
+  <thead>
+    <tr>
+      <th scope="col" width="30px">ID</th>
+      <th scope="col" width="80px">Name</th>
+      <th scope="col" width="150px">Address</th>
+      <th scope="col" width="">Date</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Mobile No.</th>
+      <th scope="col" width="70px">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for user in users%}
+    <tr>
+      <td data-label="Account">{{user.id}}</td>
+      <td data-label="Due Date">{{user.name}}</td>
+      <td data-label="Amount">{{user.address}}</td>
+      <td data-label="Period">{{user.date}}</td>
+      <td data-label="Due Date">{{user.gender}}</td>
+      <td data-label="Amount">{{user.phone_no}}</td>
+      <td data-label="Period" class="edde-icon"><a href="/delete/{{user.email}}"><button type="submit" style="width: 30px; height: 30px;"><i class="fa fa-trash fa-lg"></i></button></a></td>
+    </tr>
+    {% endfor %}
+
+  </tbody>
+</table>
+		</div>
+
+
+
+	</div>
+</section>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  $(".user").click(function(){
+    $(".profile-div").toggle(1000);
+  });
+  $(".hicon:nth-child(1)").click(function(){
+    $(".notification-div").toggle(1000);
+  });
+  $(".sicon").click(function(){
+    $(".search").toggle(1000);
+  });
+});
+</script>
+
+<script type="text/javascript">
+	$('li').click(function(){
+    $('li').removeClass("active");
+    $(this).addClass("active");
+});
+
+
+
+	
+</script>
+</body>
+</html>

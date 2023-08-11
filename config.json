@@ -1,0 +1,10 @@
+{
+  "params":
+  {
+    "local_server": "True",
+    "local_uri": "mysql://root:@localhost/fitpros",
+    "prod_uri": "mysql://root:@localhost/fitpros",
+    "admin_id": "anshul@gmail.com",
+    "admin_pass": "Anshul@123"
+  }
+}

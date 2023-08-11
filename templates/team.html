@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/team.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/homepage.css')}}">
+    <link rel="icon" href="{{url_for('static', filename='assets/favicon.png')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<body style="background: black;">
+
+    <header>
+		<div class="bottom-header" id="myHeader">
+		<div class="container">
+			<div class="col-div-4">
+				<h1 class="logo">Fit-Pros</h1>
+			</div>
+			<div class="col-div-8">
+				<nav class="menu">
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="/about">About</a></li>
+						<li><a href="#services">Services</a></li>
+						<li><a href="/logout">Logout</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		</div>
+	</header>
+
+    <h1 class="our">Our Team</h1>
+    <br><br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="{{url_for('static', filename='img/tanush.png')}}">
+                    </div>
+                    <h3 class="title">Tanush Agarkar</h3>
+                
+                    <ul class="social">
+                        <li><a href="#" class="fa fa-twitter"></a></li>
+                        <li><a href="https://instagram.com/tanush_agarkar" class="fa fa-instagram" target="__blank"></a></li>
+                        <li><a href="#" class="fa fa-linkedin"></a></li>
+                    </ul>
+                </div>
+            </div>
+     
+            <div class="col-md-3 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="{{url_for('static', filename='img/amaan.png')}}">
+                    </div>
+                    <h3 class="title">Amaan Parvez</h3>
+                    
+                    <ul class="social">
+                        <li><a href="#" class="fa fa-twitter"></a></li>
+                        <li><a href="https://instagram.com/amaanparvez3" class="fa fa-instagram" target="__blank"></a></li>
+                        <li><a href="https://www.linkedin.com/in/amaan-parvez-b5a11920b" target="__blank" class="fa fa-linkedin"></a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="col-md-3 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="{{url_for('static', filename='img/anshul.png')}}">
+                    </div>
+                    <h3 class="title">Anshul Shirbhate</h3>
+                   
+                    <ul class="social">
+                        <li><a href="https://twitter.com/anshul00730" class="fa fa-twitter"></a></li>
+                        <li><a href="https://instagram.com/__anshul__shirbhate" class="fa fa-instagram" target="__blank"></a></li>
+                        <li><a href="https://www.linkedin.com/in/anshul-shirbhate-590394195" class="fa fa-linkedin"></a></li>
+                    </ul>
+                </div>
+            </div>
+            
+
+            <div class="col-md-3 col-sm-6 team-2">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="{{url_for('static', filename='img/shreyash.png')}}">
+                    </div>
+                    <h3 class="title">Shreyash Chaudhari</h3>
+                   
+                    <ul class="social">
+                        <li><a href="#" class="fa fa-twitter"></a></li>
+                        <li><a href="https://instagram.com/s_h_r_e_y___007" class="fa fa-instagram" target="__blank"></a></li>
+                        <li><a href="#" class="fa fa-linkedin"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 last">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="{{url_for('static', filename='img/kalash.png')}}">
+                    </div>
+                    <h3 class="title">Kalash Kushwah</h3>
+                    
+                    <ul class="social">
+                        <li><a href="#" class="fa fa-twitter"></a></li>
+                        <li><a href="https://instagram.com/kalashkushwah" class="fa fa-instagram" target="__blank"></a></li>
+                        <li><a href="#" class="fa fa-linkedin"></a></li>
+                    </ul>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+</body>
+</html>

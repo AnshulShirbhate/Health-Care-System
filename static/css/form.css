@@ -1,0 +1,49 @@
+body{
+    background-image: url("https://st3.depositphotos.com/9880800/15303/i/1600/depositphotos_153036482-stock-photo-sporty-people-at-gym-workout.jpg");
+  }
+  div{
+    margin: 2em 5em 3em 5em;
+  
+    padding: 2em 6em 2em 6em;
+    background: rgb(2,0,36);
+  background: linear-gradient(117deg, rgba(12, 12, 12, 0.999) 0%, rgba(141, 139, 132, 0.976) 96%, rgb(123, 122, 114) 98%, rgb(131, 129, 123) 98%, rgba(125, 124, 118, 0.9) 98%);
+    color: #ffff;
+    font-family: sans-serif;
+    border-radius: 1.25rem;
+  }
+  #container_1{
+    text-align:center;
+  }
+  #container_2{
+   display: block;
+  
+    
+  }
+  .form{
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  .btn{
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: rgb(2,0,36);
+    font-size: large;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold ;
+}
+  
+  #submit{
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background: rgb(0, 0, 0);
+    color: inherit;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  
+  textarea{
+    width: 100%;
+  }

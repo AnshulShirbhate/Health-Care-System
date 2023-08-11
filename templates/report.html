@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/report.css')}}">
+	<link rel="icon" href="{{url_for('static', filename='assets/favicon.png')}}">
+    <title>My Data</title>
+</head>
+<body>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+
+<div class="container">
+
+        <nav id="navbar">
+            <header>{{usersdata2.name}}</header>
+            <br>
+            <h2>Physical Status</h2>
+            <label class="nav-label">Weight : {{usersdata.weight}} </label>
+            <label class="nav-label">Height : {{usersdata.height}}</label>
+            <label class="nav-label">BMI    : {{bmi}}</label>
+            <br>
+            <h2>Medical Status</h2>
+            <label class="nav-label">Blood Group : {{usersdata.bloodgroup}}</label>
+            <label class="nav-label">You are {{bmiresult}}</label>
+            <label class="nav-label">You have {{usersdata.disease}} in Disease</label>
+            <br>
+            <button type="button" class="btn"><a style="text-decoration: none; color: black;" href="/">Home</a></button>
+        </nav>
+        <main id="main-doc">
+
+            <section class="main-section" id="">
+                <h1>{{diseaseinfo.dname}}</h1>
+                <img class="top" src="{{diseaseinfo.dimage}}" alt="Team" />
+                <!-- <img class="top" src="https://images.indianexpress.com/2019/04/bloodpressure-gettyimages-759.jpg" alt="Team" /> -->
+                <p>{{diseaseinfo.ddescription}}</p>
+            </section>
+            <hr>
+            <section class="main-section" id="">
+                <header>Symptoms</header>
+                <img src="https://parkinsonsnewstoday.com/wp-content/uploads/2018/08/shutterstock_280146626.jpg" alt="">
+                <ol>
+                {% for symptom in symptoms %}
+                <li>{{symptom}}</li>
+                {% endfor %}
+                </ol>
+            </section>
+            <hr>
+            <section class="main-section" id="">
+                <header>Prevention</header>
+                <img width="400px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdQBqaXRQW7EZilpbiFRtinAo7dPXu_kfXbw&usqp=CAU" alt="Team" />
+                <ol>
+                {% for prevention in preventions %}
+                <li>{{prevention}}</li>
+                {% endfor %}
+                </ol>
+            </section>
+            <hr>
+            <section class="main-section" id="">
+                <header>Exercises</header>
+                <img width="400px" src="https://media.istockphoto.com/vectors/set-of-young-men-playing-sports-squats-pushups-plank-meditation-yoga-vector-id1324669937?k=20&m=1324669937&s=612x612&w=0&h=5Oo_EYvObq0LkzXFyv3z9cs6j4a33k1e21quPBpg_ZA=" alt="Team" />
+                <ol>
+                {% for exercise in exercises %}
+                <li>{{exercise}}</li>
+                {% endfor %}
+                </ol>
+            </section>
+            <hr>
+            <section class="main-section" id="">
+                <header>Diet</header>
+                <img width="400px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoca9Y2vBdVyXpr8ucK8qOfXjWBceKjwk9PQ&usqp=CAU" alt="Team" />
+                <ol>
+                {% for food in diet %}
+                <li>{{food}}</li>
+                {% endfor %}
+                </ol>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
