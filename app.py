@@ -3,7 +3,8 @@ from flask_sqlalchemy import SQLAlchemy
 import json
 from datetime import date
 from werkzeug.utils import redirect
-from flaskext.mysql import MySQL
+# from flaskext.mysql import MySQL
+from flask_mysqldb import MySQL
 import pymysql
 from fpdf import FPDF
 
